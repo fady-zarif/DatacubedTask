@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeVieModel"
+            type="com.fady.datacubedtask.mainModule.home.record.HomeViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/nineteenDensityPixels"
+                android:padding="30dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="@dimen/seven_density_pixel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/colorDivider">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etVideoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/twentyDensityPixels"
+                    android:drawableStart="@drawable/ic_video_name"
+                    android:drawablePadding="@dimen/tenDensityPixels"
+                    android:hint="Video Title"
+                    android:textColor="@android:color/black"
+                    app:error="@{homeVieModel.videoTitleErrorLiveData?@string/video_title_error:null}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/nineteenDensityPixels"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="@dimen/seven_density_pixel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+                app:strokeColor="@color/colorDivider">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/twentyDensityPixels">
+
+                    <TextView
+                        android:id="@+id/tvRecordingDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/record_duration_title"
+                        android:textSize="@dimen/eighteenScalePixels"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvDuration"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{homeVieModel.seekBarLiveData}"
+                        android:textSize="@dimen/eighteenScalePixels"
+                        android:layout_marginLeft="@dimen/twoDensityPixels"
+                        app:layout_constraintStart_toEndOf="@+id/tvRecordingDuration"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/sbDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/twentyDensityPixels"
+                        android:max="165"
+                        android:min="0"
+                        android:onProgressChanged="@{homeVieModel.onProgressChanged}"
+                        android:progress="60"
+                        app:layout_constraintTop_toBottomOf="@id/tvDuration" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->homeVieModel.onRecordClick(etVideoTitle.getText().toString())}"
+                android:paddingHorizontal="@dimen/sixtyDensityPixels"
+                android:paddingVertical="@dimen/thirtyDensityPixels"
+                android:text="Record"
+                android:textSize="@dimen/twentyTwoScalePixels"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DatacubedTask</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Record</string>
+    <string name="title_notifications">Saved Recordings</string>
+    <string name="video_title_error">Video Title can\'t be less than 4 characters</string>
+    <string name="cancel">cancel</string>
+    <string name="replace_alert_message">This File exists do you like to replace it ?</string>
+    <string name="record_duration_title">Recording duration in seconds:</string>
+</resources>

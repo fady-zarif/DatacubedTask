@@ -1,0 +1,55 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="seven_density_pixel">7dp</dimen>
+
+
+    <dimen name="zeroDensityPixels">0dp</dimen>
+    <dimen name="oneDensityPixels">1dp</dimen>
+    <dimen name="twoDensityPixels">2dp</dimen>
+    <dimen name="threeDensityPixels">3dp</dimen>
+    <dimen name="fourDensityPixels">4dp</dimen>
+    <dimen name="fiveDensityPixels">5dp</dimen>
+    <dimen name="sixDensityPixels">6dp</dimen>
+    <dimen name="sevenDensityPixels">7dp</dimen>
+    <dimen name="eightDensityPixels">8dp</dimen>
+    <dimen name="nineDensityPixel">9dp</dimen>
+    <dimen name="tenDensityPixels">10dp</dimen>
+    <dimen name="elevenDensityPixels">11dp</dimen>
+    <dimen name="twelveDensityPixels">12dp</dimen>
+    <dimen name="fifteenDensityPixels">15dp</dimen>
+    <dimen name="sixteenDensityPixels">16dp</dimen>
+    <dimen name="nineteenDensityPixels">19dp</dimen>
+    <dimen name="twentyDensityPixels">20dp</dimen>
+    <dimen name="twentyOneDensityPixels">21dp</dimen>
+    <dimen name="twentyTwoDensityPixels">22dp</dimen>
+    <dimen name="twentyThreeDensityPixels">23dp</dimen>
+    <dimen name="twentyFourDensityPixels">24dp</dimen>
+    <dimen name="twentyFiveDensityPixels">25dp</dimen>
+    <dimen name="twentyEightDensityPixels">28dp</dimen>
+    <dimen name="thirtyDensityPixels">30dp</dimen>
+    <dimen name="thirtyFiveDensityPixels">35dp</dimen>
+    <dimen name="fortyDensityPixels">40dp</dimen>
+    <dimen name="sixtyDensityPixels">60dp</dimen>
+    <dimen name="hundredDensityPixels">100dp</dimen>
+    <dimen name="twoHundredsDensityPixels">200dp</dimen>
+    <dimen name="twoHundredsSixtyDensityPixels">260dp</dimen>
+
+    <dimen name="nineScalePixels">9sp</dimen>
+    <dimen name="twelveScalePixels">12sp</dimen>
+    <dimen name="fifteenScalePixels">15sp</dimen>
+    <dimen name="sixteenScalePixels">16sp</dimen>
+    <dimen name="seventeenScalePixels">17sp</dimen>
+    <dimen name="eighteenScalePixels">18sp</dimen>
+    <dimen name="twentyScalePixels">20sp</dimen>
+    <dimen name="twentyTwoScalePixels">22sp</dimen>
+    <dimen name="twentyFourScalePixels">24sp</dimen>
+    <dimen name="thirtyTwoScalePixels">32sp</dimen>
+    <dimen name="thirtySixScalePixels">36sp</dimen>
+    <dimen name="fortyEightScalePixels">48sp</dimen>
+    <dimen name="fiftyThreeScalePixels">53sp</dimen>
+
+
+
+</resources>
